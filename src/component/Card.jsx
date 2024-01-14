@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaQuoteLeft, FaQuoteRight, FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 const Card = ({ name, job, image, text }) => {
     return (
         <div className='flex flex-col md:relative'>
@@ -9,29 +9,25 @@ const Card = ({ name, job, image, text }) => {
                 <div className="w-[140px] h-[140px] bg-violet-500 rounded-full absolute top-[-6px] z-[-10] left-[10px]"></div>
             </div>
 
-            <div>
-                {name}
-                {job}
+            <div className=' align-center'>
+                <div className='text-2xl font-bold mt-7'>
+                    <p className="font-bold text-2xl tracking-wider capitalize">{name}</p>
+                </div>
+                <div>
+                    <p className="uppercase text-sm text-violet-400">{job}</p>
+                </div>
             </div>
 
-            <div>
+            <div className="text-violet-400 mx-auto mt-5">
                 <FaQuoteLeft />
             </div>
-            <div>
+            <div className="text-center mt-4 text-slate-500">
                 <p>{text}</p>
             </div>
-            <div>
+            <div className="text-violet-400 mx-auto mt-5">
                 <FaQuoteRight />
             </div>
-            <div>
-                <button>
-                    <FaAngleLeft />
-
-                </button>
-                <button>
-                    <FaAngleRight />
-                </button>
-            </div>
+            
 
         </div>
     )

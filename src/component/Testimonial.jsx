@@ -11,12 +11,11 @@ const Testimonial = (props) => {
         if (newIndex < 0) newIndex = reviews.length - 1;
         if (newIndex >= reviews.length) newIndex = 0;
         setIndex(newIndex);
-    });
-
+    }, [index, reviews]);
     const surpriseShiftHandler = useCallback(() => {
         const surpriseIndex = Math.floor(Math.random() * reviews.length);
         setIndex(surpriseIndex);
-    });
+    },[reviews]);
 
     return (
         <div className="flex flex-col items-center justify-center w-[85vw] md:w-[700px] bg-white hover:shadow-xl rounded-md transition-all duration-700 mt-10 p-10">
